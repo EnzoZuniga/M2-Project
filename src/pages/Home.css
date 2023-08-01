@@ -1,0 +1,17 @@
+.Home {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home > div {
+  margin-right: 1em;
+}
+
+.icon{
+  padding: 1em;
+  padding-bottom: 0.5em;
+}

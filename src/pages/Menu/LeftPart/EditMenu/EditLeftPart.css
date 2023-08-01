@@ -1,0 +1,27 @@
+.editWrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.menuItems{
+  padding: 1em;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menuItems > div{
+  width: 100%;
+}
+
+.formRight{
+  padding: 2em;
+  justify-content: center;
+}
+
+.buttons{
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+}

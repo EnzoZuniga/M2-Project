@@ -1,0 +1,67 @@
+.menu{
+  display: flex;
+  height: 100vh;
+}
+
+.drawer{
+  padding: 2em 2em 1em;
+  background-color: black;
+  color: white;
+  max-width: 15%;
+}
+
+.extraBox{
+  border: solid 2px white;
+  border-style: dashed;
+  max-width: 90%;
+}
+
+.largeBox{
+  background-color: black;
+  padding: 2em;
+}
+
+.litleBox{
+  background-color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconDrawer{
+  color: black;
+}
+
+.menuName{
+  margin-top: 2em;
+}
+
+.leftPart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectAction{
+  padding: 3em 10em;
+  text-align: center;
+}
+
+.selectAction > span{
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.green > span{
+  color: green;
+}
+
+.red > span{
+  color: red;
+}
+
+.rowMenu :hover{
+  background-color: rgba(255, 255, 255, 0.198);
+}
