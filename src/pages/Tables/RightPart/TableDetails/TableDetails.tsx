@@ -1,5 +1,5 @@
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { Box, FormControlLabel, Switch, Tab, Tabs, Typography } from "@mui/material";
+import { Box, FormControlLabel, Switch, Tab, Typography } from "@mui/material";
 import React from "react";
 import { ICommande } from "../../../../interface/ICommande";
 import Bill from "./Tabs/Bill";
