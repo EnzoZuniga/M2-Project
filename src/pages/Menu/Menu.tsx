@@ -2,11 +2,11 @@ import { Box, Typography } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import React, { useEffect } from "react";
 import "./Menu.css"
-import DeleteLeftPart from "./LeftPart/DeleteLeftPart";
-import DefaultLeftPart from "./LeftPart/DefaultLeftPart";
-import SuccesLeftPart from "./LeftPart/SuccesLeftPart";
-import UpdateLeftPart from "./LeftPart/UpdateLeftPart";
-import EditLeftPart from "./LeftPart/EditMenu/EditLeftPart";
+import DeleteLeftPart from "./RightPart/DeleteLeftPart";
+import DefaultLeftPart from "./RightPart/DefaultLeftPart";
+import SuccesLeftPart from "./RightPart/SuccesLeftPart";
+import UpdateLeftPart from "./RightPart/UpdateLeftPart";
+import EditLeftPart from "./RightPart/EditMenu/EditLeftPart";
 import { PartEnumType } from "../../constant/PartEnum";
 import { IMenu } from "../../interface/IMenu";
 import { useEditQuery } from "../../hook/useEditQuery";

@@ -4,4 +4,5 @@ export interface IPlat {
   prixUnitaire: number;
   type: "entree" | "plat" | "dessert";
   usedProductIds: number[];
+  selectedInMenu?: boolean
 }

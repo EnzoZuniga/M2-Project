@@ -3,8 +3,8 @@ import AddIcon from '@mui/icons-material/Add';
 import "./Tables.css"
 import { ITable } from "../../interface/ITable";
 import { Box, Typography } from "@mui/material";
-import TableDetails from "./LeftPart/TableDetails";
-import Default from "./LeftPart/Default";
+import TableDetails from "./RightPart/TableDetails/TableDetails";
+import Default from "./RightPart/Default";
 
 const mockedTables: ITable[] = [
   {
@@ -53,7 +53,7 @@ const Tables: React.FC = () => {
                      onClick={() => handleEditTable(table)}
                      className={`rowTable ${selectedTable === table.id && "selectedTable"} ${table.available ? "available" : "unvailable"}`}
                 >
-                  <Typography variant="h6">{index}</Typography>
+                  <Typography variant="h6">{index + 1}</Typography>
                 </Box>
               )
             })

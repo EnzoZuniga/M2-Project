@@ -79,3 +79,43 @@
 .unvailable{
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.billWrapper{
+  display: grid;
+  grid-template-columns: 1fr 20em;
+}
+
+.bill{
+  margin-right: 3em;
+}
+
+.bill-row{
+  display: flex;
+  justify-content: space-between;
+  &:first-child {
+    padding-top: 0;
+  }
+  padding: 1em;
+}
+
+.total{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.paymentMethode{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.methode{
+  padding: 2em;
+  height: 7em;
+  background-color: grey;
+}
+
+.order{
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
