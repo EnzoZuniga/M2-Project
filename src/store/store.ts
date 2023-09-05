@@ -20,14 +20,14 @@ const store = createSlice({
     setMenu: (state, action: PayloadAction<IMenu>) => {
       state.menu = action.payload;
     },
-    setCurrentCommande: (state, action: PayloadAction<ICommande>) => {
+    setCurrentCommande: (state, action: PayloadAction<Partial<ICommande>>) => {
       state.currentCommande = action.payload;
     },
     resetStore: () => initialState,
   },
 });
 
-export const { setDisplayPart, setMenu, resetStore } = store.actions;
+export const { setCurrentCommande, setDisplayPart, setMenu, resetStore } = store.actions;
 export default configureStore({
   reducer: store.reducer,
 });

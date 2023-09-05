@@ -8,6 +8,7 @@ import { HomeIconButton } from './components/HomeIconButton';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Tables from './pages/Tables/Tables';
+import Reservation from './pages/Reservation/Reservation';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,7 +18,8 @@ root.render(
     <Provider store={store}>
       {/* <Router /> */}
       {/* <Menu /> */}
-      <Tables/>
+      {/* <Tables/> */}
+      <Reservation/>
       <HomeIconButton/>
     </Provider>
   </React.StrictMode>

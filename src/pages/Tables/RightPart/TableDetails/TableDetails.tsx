@@ -4,6 +4,8 @@ import React from "react";
 import { ICommande } from "../../../../interface/ICommande";
 import Bill from "./Tabs/Bill";
 import Order from "./Tabs/Order";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../interface/IRootState";
 
 interface IProps{
   id: number
@@ -13,18 +15,7 @@ const TableDetails: React.FC<IProps> = ({id}) => {
 
   const [value, setValue] = React.useState('1');
   const [available, setAvailable] = React.useState(true);
-
-  //TODO getCommande via idTable
-  const mockCommande: ICommande = {
-    id: 1,
-    idPlats: [1, 4, 6, 9],
-    idReservation: 1,
-    idMenus: [],
-    idTable: 2,
-    heurDepart: new Date(),
-    heureArriver: new Date(),
-    noteTable: 70
-  }
+  const commande = useSelector((state: RootState) => state.currentCommande) as ICommande;
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -46,7 +37,7 @@ const TableDetails: React.FC<IProps> = ({id}) => {
           <Order idTable={id} />
         </TabPanel>
         <TabPanel sx={{height: "70vh"}} value="2">
-          <Bill commande={mockCommande}/>
+          <Bill commande={commande}/>
         </TabPanel>
       </TabContext>
     </Box>

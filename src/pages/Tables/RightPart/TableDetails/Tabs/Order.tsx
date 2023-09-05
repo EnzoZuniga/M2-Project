@@ -1,19 +1,17 @@
-import { Box, Button, ButtonGroup, Divider, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Divider, Icon, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { IMenu } from "../../../../../interface/IMenu";
 import { IPlat } from "../../../../../interface/IPlat";
 import { ICommande } from "../../../../../interface/ICommande";
 import ModalMenuSelected from "./ModalMenuSelected";
 import BillRow from "../../../../../components/BillRow";
-import { useDispatch } from "react-redux";
+import { Remove } from '@mui/icons-material';
 
 interface IProps{
   idTable: number
 }
 
 const Order: React.FC<IProps> = ({idTable}) => {
-
-  const dispatch = useDispatch();
 
   const [menuSelected, setMenuSelected] = useState<IMenu[]>([]);
   const [menu, setMenu] = useState<IMenu>();
@@ -42,6 +40,7 @@ const Order: React.FC<IProps> = ({idTable}) => {
     }
 
     setCommande(newCommande)
+    //TODO put/patch commande
   }, [idTable, menuSelected, platSelected])
   
   // TODO getMenus
@@ -151,6 +150,12 @@ const Order: React.FC<IProps> = ({idTable}) => {
     setOpenModalMenu(true)
   }
 
+  const handleRemove = (idMenu?: number, idPlat?: number) => {
+    if(idMenu){
+
+    }
+  }
+
   return(
     <Box className="order">
       <Box>
@@ -210,17 +215,27 @@ const Order: React.FC<IProps> = ({idTable}) => {
         </Typography>
         <br/>
         <Box className="bill">
+          <Typography variant="subtitle1">Menu</Typography>
+          <Divider orientation="horizontal" sx={{marginBottom: "1em"}}/>
           {
             commande?.idMenus?.map((id: number) => {
               return(
-                <BillRow key={id} idMenu={id}/>
+                <Box className="remove">
+                  <BillRow key={id} idMenu={id}/>
+                  <Remove onClick={() => handleRemove(id)} />
+                </Box>
               )
             })
           }
+          <Typography variant="subtitle1">Plats à la carte</Typography>
+          <Divider orientation="horizontal" sx={{marginBottom: "1em"}}/>
           {
             commande?.idPlats?.map((id: number) => {
               return(
-                <BillRow key={id} idPlat={id}/>
+                <Box className="remove">
+                  <BillRow key={id} idPlat={id}/>
+                  <Remove onClick={() => handleRemove(undefined, id)} />
+                </Box>
               )
             })
           }
